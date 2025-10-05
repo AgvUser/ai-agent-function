@@ -1,0 +1,26 @@
+{
+  "name": "functions",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "clean": "rimraf dist",
+    "prestart": "npm run clean && npm run build",
+    "start": "func start",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@azure/functions": "^4.0.0",
+    "@azure/identity": "^4.11.1",
+    "@types/node-fetch": "^2.6.12",
+    "http-proxy": "^1.18.1",
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.13",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.9.2"
+  },
+  "main": "dist/src/{index.js,functions/*.js}"
+}
